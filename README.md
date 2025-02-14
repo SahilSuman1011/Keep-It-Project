@@ -108,6 +108,12 @@ The application should now be running at:
 - Frontend: http://localhost:3000
 - Backend: http://localhost:5000
 
+## Screenshots of the User Interface :
+![image](https://github.com/user-attachments/assets/28d37890-97f8-45da-837a-5a7c10e2bc72)
+![image](https://github.com/user-attachments/assets/01ec2836-1a01-4370-9b9e-6fac5e491b89)
+
+
+
 ## Step 6: Verify the Setup
 
 1. Open http://localhost:3000 in your browser
