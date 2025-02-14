@@ -149,7 +149,7 @@ localStorage.clear()
    - Press Ctrl+C in each terminal window
    - Or close the terminal windows
 
-## Additional Features You Can Add
+## Additional Features that Can be Added in future to Enhance Product Quality
 
 1. Authentication
 2. Note categories/labels
