@@ -10,7 +10,7 @@ const API_BASE_URL = process.env.REACT_APP_API_URL || '/api';
 function App() {
   const [notes, setNotes] = useState([]);
   const [editingNote, setEditingNote] = useState(null);
-  const [setError] = useState(null);
+  const [error, setError] = useState(null); // Corrected line
   const [loading, setLoading] = useState(true);
   const [theme, setTheme] = useState('light');
 
