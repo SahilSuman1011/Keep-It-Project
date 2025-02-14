@@ -155,4 +155,4 @@ localStorage.clear()
    - Press Ctrl+C in each terminal window
    - Or close the terminal windows
 
-The application now provides a solid foundation for a Google Keep clone with both frontend and backend integration, plus local storage fallback for offline functionality.
+The application now provides a solid foundation with fundamental CRUD (Create, Read, Update, Delete) operations and a user interface (UI) similar to Google Keep , plus local storage fallback for offline functionality.
