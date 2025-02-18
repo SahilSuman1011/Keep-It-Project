@@ -10,7 +10,6 @@ const API_BASE_URL = process.env.REACT_APP_API_URL || '/api';
 function App() {
   const [notes, setNotes] = useState([]);
   const [editingNote, setEditingNote] = useState(null);
-  const [setError] = useState(null); // Corrected line
   const [loading, setLoading] = useState(true);
   const [theme, setTheme] = useState('light');
 
@@ -33,14 +32,13 @@ function App() {
         localStorage.setItem('notes', JSON.stringify(backendNotes));
       } catch (err) {
         console.error('Error loading notes:', err);
-        setError('Failed to load notes. Using local data if available.');
       } finally {
         setLoading(false);
       }
     };
 
     loadNotes();
-  }, [setError]);
+  }, []);
 
   useEffect(() => {
     try {
@@ -66,10 +64,8 @@ function App() {
 
       const newNote = await response.json();
       setNotes(prevNotes => [...prevNotes, newNote]);
-      setError(null);
     } catch (err) {
       console.error('Error creating note:', err);
-      setError('Failed to create note. Please try again.');
       
       // Fallback to local storage
       const newNote = {
@@ -101,10 +97,8 @@ function App() {
         prevNotes.map(note => (note.id === id ? updatedNote : note))
       );
       setEditingNote(null);
-      setError(null);
     } catch (err) {
       console.error('Error updating note:', err);
-      setError('Failed to update note. Please try again.');
       
       // Fallback to local update
       setNotes(prevNotes =>
@@ -132,10 +126,8 @@ function App() {
       }
 
       setNotes(prevNotes => prevNotes.filter(note => note.id !== id));
-      setError(null);
     } catch (err) {
       console.error('Error deleting note:', err);
-      setError('Failed to delete note. Please try again.');
       
       // Fallback to local delete
       setNotes(prevNotes => prevNotes.filter(note => note.id !== id));
