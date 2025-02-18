@@ -14,7 +14,7 @@ function App() {
   const [theme, setTheme] = useState('light');
 
   useEffect(() => {
-    const loadNotes = async () => {
+    const loadNotes = async () => { 
       try {
         // Loading from localStorage first
         const savedNotes = localStorage.getItem('notes');
