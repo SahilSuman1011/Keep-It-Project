@@ -146,12 +146,7 @@ The application should now be running at:
 
 2. Monitor the browser's console and network tab while testing
 
-3. Clear localStorage if you encounter persistent issues:
-```javascript
-localStorage.clear()
-```
-
-4. To stop the servers:
+3. To stop the servers:
    - Press Ctrl+C in each terminal window
    - Or close the terminal windows
 
